@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "Inventory Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Inventory",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/inventory"
+      }
+    },
+    {
+      "name": "Get Item",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/inventory/1"
+      }
+    },
+    {
+      "name": "Create Item",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Orange Juice\",\"price\":3.5,\"stock\":20}"
+        },
+        "url": "http://127.0.0.1:5000/inventory"
+      }
+    },
+    {
+      "name": "Update Item",
+      "request": {
+        "method": "PATCH",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"price\":4.25,\"stock\":15}"
+        },
+        "url": "http://127.0.0.1:5000/inventory/1"
+      }
+    },
+    {
+      "name": "Delete Item",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:5000/inventory/1"
+      }
+    },
+    {
+      "name": "Find External Product",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/api/lookup?query=Nutella"
+      }
+    }
+  ]
+}
