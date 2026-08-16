@@ -216,10 +216,10 @@ python cli.py --url http://localhost:5000 list
 
 ## 6. Testing
 
-Run the complete test suite:
+Run the complete test suite from the project's root:
 
 ```bash
-pytest -q
+python -m pytest -q
 ```
 
 The tests cover:
